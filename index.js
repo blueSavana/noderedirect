@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 app.get('/', (req,res)=> {
-    res.redirect('https://www.yahoo.com')
+    res.redirect(process.env.SITE)
 })
 const PORT = Number(process.env.PORT) || 3000
 
